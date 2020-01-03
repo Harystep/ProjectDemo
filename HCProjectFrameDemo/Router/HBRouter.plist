@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>safeFunction</key>
+	<string>HRFunctionViewController</string>
+	<key>videoPlayer</key>
+	<string>HRVideoPlayerViewController</string>
+	<key>mapLocation</key>
+	<string>BMKShowMapPage</string>
+	<key>myModule</key>
+	<string>YHMyViewController</string>
+	<key>simpleDemo</key>
+	<string>HRBaseDemoController</string>
+	<key>mjextensionDemo</key>
+	<string>HRMJExtensionController</string>
+	<key>Demo1</key>
+	<string>HRDemo1Controller</string>
+</dict>
+</plist>

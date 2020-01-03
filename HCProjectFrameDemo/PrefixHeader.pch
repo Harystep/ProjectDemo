@@ -1,0 +1,60 @@
+//
+//  PrefixHeader.pch
+//  HCProjectFrameDemo
+//
+//  Created by pxsl on 2019/12/14.
+//  Copyright © 2019 test. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "HCRouter.h"
+#import "UITableView+HRCellIdentifiers.h"
+#import "UIResponder+HBRouter.h"
+#import "HRProgressHub.h"
+#import "UIView+Radius.h"
+#import "UIColor+ChangeColor.h"
+#import "UIButton+Button.h"
+#import "UILabel+Extend.h"
+#import "UIView+Extension.h"
+#import "HRBaseViewController.h"
+#import "UIViewController+Extend.h"
+#import "MJRefresh.h"
+#import "HRNavigationViewController.h"
+#import <MJExtension/MJExtension.h>
+
+#define kHRMarginX 16.0
+#define kHRMarginY 10.0
+
+#define __weakSelf(weakSelf)  __weak typeof(self) weakSelf = self
+#define kScreenWidth [UIScreen mainScreen].bounds.size.width
+#define kScreenHeight [UIScreen mainScreen].bounds.size.height
+#define kFontSize(font) [UIFont systemFontOfSize:font]
+#define kColorHex(Hex) [UIColor colorWithHexString:Hex]
+
+#define kHRISIphoneX_XS    (kScreenWidth ==375.f&& kScreenHeight ==812.f? YES : NO)
+#define kHRISIphoneXR_XSMax    (kScreenWidth ==414.f&& kScreenHeight ==896.f? YES : NO)
+#define kHRISIphoneXMAS (kScreenWidth ==621.f&& kScreenHeight ==1344.f? YES : NO)
+
+#define isBangScreen    (kHRISIphoneX_XS || kHRISIphoneXR_XSMax||kHRISIphoneXMAS)
+
+#define kHRStatusBarHeight    (isBangScreen ?44.f:20.f)
+
+#define kHRNavigationBarHeight  44.f
+
+#define kHRStatusBarAndNavigationBarHeight  (isBangScreen ?88.f:64.f)
+
+#define kHRTabbarHeight        (isBangScreen ? (49.f+34.f) :49.f)
+
+#define kHRTabbarSafeBottomHeight        (isBangScreen ?34.f:0.f)
+//状态栏高度
+#define KStatuesBarHeight  ([UIApplication sharedApplication].statusBarFrame.size.height)
+//导航栏高度
+#define KNavigationBarHeight 44.0
+//导航栏高度+状态栏高度
+#define kViewTopHeight (KStatuesBarHeight + KNavigationBarHeight)
+//iphoneX适配差值
+#define KiPhoneXSafeAreaDValue ([[UIApplication sharedApplication] statusBarFrame].size.height>20?34:0)
+
+#endif /* PrefixHeader_pch */
